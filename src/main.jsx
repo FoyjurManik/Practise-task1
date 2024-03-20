@@ -12,12 +12,9 @@ import Service from './pages/Services';
 import About from './pages/About';
 import Faq from './pages/Faq';
 import Login from './pages/Login';
+import Services from './pages/Services';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,12 +24,16 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>
+        
+      },
+      {
+        path:'/',
         element:<Service></Service>
         
       },
       {
-        path:'/service',
-        element: <Service></Service>
+        path:'/services',
+        element: <Services></Services>
         
       },
       {
@@ -50,15 +51,16 @@ const router = createBrowserRouter([
         element:<Login></Login>
         
       },
-      {
-        path:'/',
-        element:
-        
-      },
+     
        
     ]
   },
 ]);
 
-<RouterProvider router={router} />
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
+)
+
 
